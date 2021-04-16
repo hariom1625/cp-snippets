@@ -17,4 +17,13 @@ ll setkBit(ll n, ll k) {
 
 	return ((1 << k) | n);
 }
-//todo Brian Kernighan's Algo
+// Brian Kernighan's Algo to count number of setBit of a number
+
+ll countSetBit(ll n) {
+
+
+	if (n == 0)
+		return 0;
+
+	else 1 + countSetBit(n & (n - 1));
+}
